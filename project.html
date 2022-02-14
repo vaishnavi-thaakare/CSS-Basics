@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Project </title>
+    <style>
+        body{
+            background-color: aqua;
+            color:green;
+        }
+        h4{
+            text-align: center;
+            color:white;
+        }
+        form{
+            color:blue;
+        }
+        /* Some element just dont inheritant the common property for that we have to use inherit */
+        button{
+            color:inherit
+        }
+        h4-tag{
+            color:blue
+
+        }
+
+
+
+
+
+    </style>
+</head>
+<body>
+    <h1>Projects</h1>
+    <section>
+        <h4>@ CSS Inheritance</h4>
+        <p>otherwise manipulated to create shapes that make up designs to decorate greetings cards, pictures, boxes,
+            eggs,
+            and to make models, jewelry, mobiles, etc. Quilling starts with rolling a strip of paper into a coil and
+            then
+            pinching the coil into shapes that can be glued together. There are advanced techniques and different sized
+            paper that are used to create 3D miniatures, abstract art, flowers, and portraits among many</p>
+    </section>
+    <section>
+        <form action="menu">
+            <label for="item-1">Choose Sweets
+                <select name="sweet" id="item-1">
+                    <option value=" ">Choose from the option </option>
+                    <option value="kaju-katli">Kaju Katli </option>
+                    <option value="milk-cake">Milk cake </option>
+                    <option value="kalakand">Kalakand </option>
+                    <option value="gulab-jamun">Gulab Jamun </option>
+
+                </select><br><br>
+                <label for="">Enter your password
+                    <input type="text">
+                </label>
+                <button>Click me!</button>
+            </label>
+            =</form>
+    </section>
+    <hr>
+    <h4>Specificity</h4>
+    <ol>
+        <li>1.Inline Style</li>
+        <li>1.ID Selector</li>
+        <li>1.Inline Style</li>
+        <li>1.Inline Style</li>
+    </ol>
+    <h4 id="h4-tag" style="color:red">@ Inline Style</h4>
+    <p>It apply inline style property even if it contain id styling property as inline styling property is more specific than id </p>
+</body>
+</html>

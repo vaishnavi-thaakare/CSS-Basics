@@ -1,0 +1,414 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        /* *{
+            background-color: aquamarine;
+            color:blue;
+            font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+            font-size: large;
+            line-height: 2;
+            text-align: center;
+            
+           
+        } */
+        button {
+            border: 2px solid black;
+            background-color: blueviolet;
+            padding: 0.5rem 1rem;
+            border-radius: 0.5rem;
+            margin: 1rem;
+        }
+
+        h3 {
+            font-size: x-large;
+            font-weight: bolder;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+
+        }
+
+        h1,
+        h4 {
+            text-align: center;
+            font-weight: bolder;
+            font-size: x-large;
+        }
+
+        #btn-1 {
+            background-color: #9333ea;
+            color: white;
+            border-radius: 1rem;
+        }
+
+        #btn-2 {
+            background-color: #be185d;
+            color: white;
+            border-radius: 1rem;
+            padding: 0.7rem 1rem;
+        }
+
+        #btn-3 {
+            background-color: #115e59;
+            color: white;
+            padding: 0.7rem 2rem;
+        }
+
+        #btn-4 {
+            background-color: yellow;
+            color: rgb(0, 0, 0);
+            border-radius: 0%;
+            padding: 0.7rem 2rem;
+        }
+
+        #container {
+            border: 2px solid black;
+            border-radius: 1rem;
+            height: 40vh;
+            width: 70%;
+            text-align: center
+        }
+
+        .para-3 {
+            background-color: bisque;
+            color: #9333ea;
+            text-align: center;
+            max-width: 600px;
+            margin: auto
+        }
+
+        nav li {
+            text-align: right;
+            text-decoration: none;
+
+
+            display: inline;
+
+        }
+
+        #navigation {
+            text-align: right;
+            background-color: #9333ea;
+            padding: 2rem 2rem;
+            border-top-right-radius: 5rem;
+
+
+
+        }
+        /* desendant selector */
+        nav a {
+            font-size: larger;
+            font-weight: bold;
+            text-decoration: none;
+            margin: 1.5rem;
+            color: white;
+        }
+
+        nav a:hover {
+            font-size: x-large;
+        }
+/* nav a:focus{
+            font-size: x-large;
+        } */
+        nav a:active {
+            color: black;
+
+        }
+
+        h2+p {
+            color: blue;
+            background-color: yellowgreen;
+
+        }
+
+        /* direct child  selector */
+        footer>a {
+            background-color: aqua;
+            color: #115e59;
+            text-decoration: line-through;
+
+        }
+
+        footer {
+            background-color: #9333ea;
+
+            border-top-left-radius: 2rem;
+            text-decoration: none;
+            padding: 1rem;
+        }
+
+        footer a {
+
+            text-decoration: none;
+            padding: 0.7rem;
+            color: white;
+
+
+
+        }
+
+        footer li {
+            display: inline;
+
+            text-align: right;
+
+        }
+
+        /* attribute selector */
+        input[type="password"] {
+            padding: 1rem;
+            color: #7e4a35;
+        }
+
+        input[type="date"] {
+            color: #622569;
+            background-color: aqua;
+        }
+
+        /* pseudo class */
+        /* 1.hover */
+        button:hover {
+            background-color: antiquewhite;
+            color: #622569;
+            font-size: larger;
+        }
+
+        /* 2.Active */
+        button:active {
+            color: red
+        }
+
+        input[type="radio"]:checked {
+            box-shadow: 0 0 0 3px red;
+        }
+        .paragraph:nth-of-type(2n){
+            background-color: aquamarine;
+            color:blue
+        }
+    </style>
+    <title>CSS Selector</title>
+</head>
+
+<body>
+    <h1>CSS Selector</h1>
+    <h4>1.Universal Selector</h4>
+    * {} is used to select all element in the program.
+    <p id="para">Painting is a constructive art. It is the human passion to draw something out of heart. Read the
+        following essay that sheds light upon meaning and purpose of painting, painting as a hobby and benefits of
+        painting essay for children & students. This essay is quite helpful for children & students for their school
+        exams preparation etc.
+
+    </p>
+    <hr>
+    <h4> 2.Element Selector</h4>
+    <button>Click Me !</button>
+    <button>Submit</button>
+    <button>Browse</button>
+    <button>Register </button>
+
+    <h3>Utterwise Technology</h3>
+    <h3>Intern Software Engineer</h3>
+    <h3>Front-End Technolgy</h3>
+    <h3>Back-End Technolgy</h3>
+    <hr>
+    <h4>3. ID Selector</h4>
+    <p> ID is always unique an it selected by using #</p>
+    <button id="btn-1">Click Me !</button>
+    <button id="btn-2">Submit</button>
+    <button id="btn-3">Browse</button>
+    <button id="btn-4">Register </button>
+
+
+
+    <div id="container">
+        <h2>Menu </h2>
+        <form action="menu">
+            <label for="item-1">Choose Sweets
+                <select name="sweet" id="item-1">
+                    <option value=" ">Choose from the option </option>
+                    <option value="kaju-katli">Kaju Katli </option>
+                    <option value="milk-cake">Milk cake </option>
+                    <option value="kalakand">Kalakand </option>
+                    <option value="gulab-jamun">Gulab Jamun </option>
+                </select><br><br>
+            </label>
+            <label for="item-2">Choose Chat
+                <select name="chat" id="item-2">
+                    <option value=" ">Choose from the option</option>
+                    <option value="kachori-chat">Kachori Chat</option>
+                    <option value="papadi-chat">Papadi Chat</option>
+                    <option value="bhel-puri">Bhel Puri</option>
+                    <option value="oli-bhel">Oli Bhel</option>
+                </select><br><br>
+
+            </label>
+            <label for="item-3">South Indian Dishes
+                <select name="south-indian-dishes" id="item-3">
+                    <option value=" ">Choose from the option </option>
+                    <option value="masala-dosa">masala dosa</option>
+                    <option value="plain-dosa">Plain Doa</option>
+                    <option value="idali-sambhar">idali sambhar</option>
+                    <option value="uttapa">uttapa</option>
+
+                </select><br>
+            </label>
+            <button id="btn-5">Submit order</button>
+
+        </form>
+
+
+    </div>
+    <hr>
+    <h4>3. Class Selector</h4>
+    <p class="para-3">Argumentative Essays (Expository Essays) ii) Issue Based Essays Argumentative essays usually
+        involve an open-ended prompt. You may be given an idea, a proverbial phrase or a quote from a famous
+        personality, and be asked to analyse and assess its applicability.Examples of argumentative CSS essays include
+        “Gender Equality is a Myth”, “Beware the barrenness of life!” and “Every Cloud has a Silver Lining”, among many
+        others.</p><br>
+
+    <p class="para-3">Examples of argumentative CSS essays include “Gender Equality is a Myth”, “Beware the barrenness
+        of life!” and “Every Cloud has a Silver Lining”, among many others.Issue based CSS essays tend to focus on
+        important events in the world today, and in that sense are more specific than the former. You may be asked to
+        pen your thoughts on issues of national or global significance, and to suggest possible remedies for the
+        problems at hand. Examples of issue based essays in the CSS exams include, “Water Crisis and National Unity”,
+        “Feminism is Not Really a Third World Issue” and “Is Colonial Legacy Impeding Pakistan’s Progress?” to name a
+        few.</p>
+
+
+    <p class="para-4">Your selection of topic could potentially determine from the very start, whether or not your essay
+        will receive a passing grade. Needless to say, one must devise a strategy for doing so.Our first tip, to help
+        you write a CSS essay, is to know yourself! Sounds simple enough, but candidates often struggle in trying to
+        assess their own strengths and weaknesses. In general keep the following questions in mind, when you’re deciding
+        on which way to go:</p>
+
+    <p class="para-4">Your selection of topic could potentially determine from the very start, whether or not your essay
+        will receive a passing grade. Needless to say, one must devise a strategy for doing so.Our first tip, to help
+        you write a CSS essay, is to know yourself! Sounds simple enough, but candidates often struggle in trying to
+        assess their own strengths and weaknesses. In general keep the following questions in mind, when you’re deciding
+        on which way to go:
+        For argumentative essays:</p>
+    <h4>3. Desendant Selector</h4>
+    <p> h1, h2 means select both h1 and h2 an apply comman property to both.Li a that space between li and a means apply
+        css property to a which present in a.</p>
+    <nav id="navigation">
+        <ul>
+            <li><a href="index.html" target="blank">Home</a></li>
+            <li><a href="project.html" target="blank">Project</a></li>
+            <li><a href="blog.html">Blog</a></li>
+        </ul>
+    </nav>
+    <h4>Adjecent Selector</h4>
+    <p>The element comes immediately after another . We use + to denote adjecent selector</p>
+
+    <h2>Interview</h2>
+    <p>Para (Special Forces),[5] also known as Para SF, is a special forces unit of the Indian Army, and part of the
+        Parachute Regiment. The unit specializes in various roles including hostage rescue, counter-terrorism,
+        unconventional warfare, special reconnaissance, foreign internal defence, counter-proliferation,
+        counter-insurgency, seek and destroy and personnel recovery.[6]</p>
+    <h4>Direct Child Selector</h4>
+    <p>The element comes directly after the main element (Not like nested inside another element ) . We use > to denote
+        adjecent selector</p>
+    <footer>
+        <ul>
+            <li><a href="https://github.com/vaishnavi-thaakare/HTML-Basics" target="blank"
+                    title="go to github profile">Github</a></li>
+            <li><a href="/" target="blank" title="go to naukari profile">naukari profile</a></li>
+            <li><a href="/" target="blank" title="https://www.linkedin.com/in/vaishnavi-thakare-/">Linkedin Profile </a>
+            </li>
+        </ul>
+        <a href="https://twitter.com/Twitter?ref_src=twsrc%5Egoogle%7Ctwcamp%5Eserp%7Ctwgr%5Eauthor" target="blank"
+            title="go to twitter.com">Twitter</a>
+    </footer>
+    <h4>Attribute Selector</h4>
+    <label for="input-7"> Enter username
+        <input id="input-7" type="text" placeholder="Write username here">
+    </label>
+    <label for="input-7"> Enter password
+        <input id="input-7" type="password" placeholder="Write username here">
+    </label>
+    <label for="input-7"> Enter birthday month
+        <input id="input-7" type="date" placeholder="Write birthdate here">
+    </label>
+    <h4> @ Pseudo Classes</h4>
+    <p>Kweyord added to the selector that specifies a special state of selected candidate. They all start with :</p>
+    <button>Click me !</button>
+    <h5>Checked</h5>
+    <form action="que">
+        <p>Are you a morning person</p>
+        <label for="input-10">Yes
+            <input id="input-10" type="radio" name="que-1" value="yes">
+        </label>
+        <label for="input-10">NO
+            <input id="input-10" type="radio" name="que-1" value="no">
+        </label>
+
+    </form>
+    <h4>nth-of-type(3n)</h4>
+    <section>
+        <p class="paragraph">Para (Special Forces),[5] also known as Para SF, is a special forces unit of the Indian Army,
+            and part of the Parachute Regiment. The unit specializes in various roles including hostage rescue,
+            counter-terrorism, unconventional warfare, special reconnaissance, foreign internal defence,
+            counter-proliferation, counter-insurgency, seek and destroy and personnel recovery.[6]
+
+        </p>
+        <button>Click me </button>
+        <hr>
+    </section>
+    <section>
+        <p class="paragraph">Para (Special Forces),[5] also known as Para SF, is a special forces unit of the Indian Army,
+            and part of the Parachute Regiment. The unit specializes in various roles including hostage rescue,
+            counter-terrorism, unconventional warfare, special reconnaissance, foreign internal defence,
+            counter-proliferation, counter-insurgency, seek and destroy and personnel recovery.[6]
+
+        </p>
+        <button>Click me </button>
+    </section>
+    <section>
+        <p class="paragraph">Para (Special Forces),[5] also known as Para SF, is a special forces unit of the Indian Army,
+            and part of the Parachute Regiment. The unit specializes in various roles including hostage rescue,
+            counter-terrorism, unconventional warfare, special reconnaissance, foreign internal defence,
+            counter-proliferation, counter-insurgency, seek and destroy and personnel recovery.[6]
+
+        </p>
+        <button>Click me </button>
+    </section>
+
+    <section>
+        <p class="paragraph">Para (Special Forces),[5] also known as Para SF, is a special forces unit of the Indian Army,
+            and part of the Parachute Regiment. The unit specializes in various roles including hostage rescue,
+            counter-terrorism, unconventional warfare, special reconnaissance, foreign internal defence,
+            counter-proliferation, counter-insurgency, seek and destroy and personnel recovery.[6]
+
+        </p>
+        <button>Click me </button>
+    </section>
+
+    <section>
+        <p class="paragraph">Para (Special Forces),[5] also known as Para SF, is a special forces unit of the Indian Army,
+            and part of the Parachute Regiment. The unit specializes in various roles including hostage rescue,
+            counter-terrorism, unconventional warfare, special reconnaissance, foreign internal defence,
+            counter-proliferation, counter-insurgency, seek and destroy and personnel recovery.[6]
+
+        </p>
+        <button>Click me </button>
+    </section>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</body>
+
+</html>
